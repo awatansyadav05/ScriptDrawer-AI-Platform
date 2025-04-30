@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-const ProductCard = ({ image, title, description }) => {
+const ProductCard = ({ image, title, bgcolor,description }) => {
   const [showModal , setShowModal] = useState(false);
+
   return (
     <>
     <div className="bg-white rounded-3xl shadow-md overflow-hidden transition-transform duration-700 ease-in-out transform hover:scale-105 ">
@@ -9,7 +10,13 @@ const ProductCard = ({ image, title, description }) => {
       <div className="p-4">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm">{description}
-            <span className='italic font-semibold text-slate-600 ml-1 cursor-pointer' onClick={()=>setShowModal(true)} > readmore  </span>
+            <button className='italic font-semibold text-slate-600 ml-1 cursor-pointer' 
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent card click from triggering
+            setShowModal(true);
+          }} >
+             readmore 
+          </button>
         </p>
 
       </div>
@@ -20,10 +27,11 @@ const ProductCard = ({ image, title, description }) => {
       {
         showModal &&(
           <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-xl shadow-lg max-w-md w-full relative">
+          <div className="bg-white p-6 rounded-xl shadow-lg max-w-md w-full relative mx-4  " onClick={(e)=> e.stopPropagation()}>
             <button
               className="absolute top-2 right-3 text-xl text-gray-600 hover:text-black"
-              onClick={() => setShowModal(false)}
+              onClick={() =>setShowModal(false)
+               }
             >
               &times;
             </button>

@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Products from '../components/Products';
 import Services from '../components/Services';
+import Footer from '../components/Footer'
 import MainLayout from '../layouts/mainlayout';
 
 
@@ -15,6 +16,7 @@ const Home = () => {
       </div>
       <Products />
       <Services />
+      <Footer />
     </MainLayout>
   );
 };
