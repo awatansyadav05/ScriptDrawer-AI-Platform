@@ -43,7 +43,7 @@ const Hero = () => {
 
       {/* Video overlapping Hero and Products */}
       <div
-        className="absolute left-1/2 transform -translate-x-1/2 z-30 px-4 sm:mt-20 w-full max-w-5xl"
+        className="absolute left-1/2 transform -translate-x-1/2 z-30 px-4 pt-10 w-full max-w-5xl"
       >
         <div className="aspect-[16/9] w-full shadow-2xl rounded-lg overflow-hidden border-4 border-white">
           <iframe

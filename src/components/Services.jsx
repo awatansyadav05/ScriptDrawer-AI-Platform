@@ -21,7 +21,7 @@ const FAQSection = () => {
       answer: "We offer free platform."
     },
     {
-      question: "Can I add my own text, images, and audio to Steve AI generated videos?",
+      question: "Can I add my own text, images, and audio to Scriptdrawer AI generated videos?",
       answer: "Yes! ScriptDrawer AI allows full customization where you can upload your own media and edit the AI-generated content."
     }
   ];
@@ -34,11 +34,11 @@ const FAQSection = () => {
     <section className="pb-16 pt-4 md:pt-5 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-        
+
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
             >
               <button
@@ -50,7 +50,7 @@ const FAQSection = () => {
                   {activeIndex === index ? '−' : '+'}
                 </span>
               </button>
-              
+
               {activeIndex === index && (
                 <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
                   <p className="text-gray-700">{faq.answer}</p>
