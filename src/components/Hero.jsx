@@ -8,7 +8,10 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold">An AI Tool Beyond</h1>
         <p className="mt-4 text-lg">Script Drawer isn't just AI tool, it's that beyond of that</p>
-        <button className="mt-6 px-6 py-3 bg-white text-[#140035] font-semibold rounded-full shadow hover:shadow-lg">Create Videos with AI</button>
+        <button className="mt-6 px-6 py-3 cursor-pointer bg-black text-[#ffffff] font-semibold rounded-full  relative
+  before:content-[''] before:absolute before:-inset-[1.5px] before:rounded-full before:z-[-1]
+  before:bg-gradient-to-r before:from-[#00cfff] before:to-[#e46cff]
+  hover:shadow-lg transition-all duration-200">Create Videos with AI</button>
         {/* 50,000 div */}
         <div className="mt-10 flex flex-col md:flex-row justify-center items-center gap-8">
           <div className='flex flex-col gap-y-[5px]'>
@@ -16,8 +19,7 @@ const Hero = () => {
             <span className="text-sm font-regular opacity-80">Users</span>
           </div>
 
-          <div className="h-8 w-px bg-slate-800 bg-opacity-50 mx-3"></div>
-
+          <div className="h-12  w-[1px] md:w-[2px] bg-slate-800 bg-opacity-50 mx-3 md:rotate-0 rotate-90 transform origin-center"></div>
           <div className="flex gap-6 text-sm opacity-70">
             <img src={Truist} alt="Truist" className="h-6" />
             <img src={Amazon} alt="Amazon" className="h-6" />
@@ -43,7 +45,7 @@ const Hero = () => {
       <div
         className="absolute left-1/2 transform -translate-x-1/2 z-30 px-4 mt-10 w-full max-w-5xl"
       >
-        <div className="aspect-[16/9] w-full shadow-2xl rounded-lg overflow-hidden border-4 border-white">
+        <div className="aspect-[16/9] w-full shadow-2xl rounded-lg overflow-hidden border-4 border-white lg:-mt-28">
           <iframe
             className="w-full h-full"
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
