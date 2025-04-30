@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import dropdownIcon from "../assets/dropdown.png";
-import logo from "../assets/ScriptDrawer.png";
+import logo from "../assets/Scriptdrawer.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function Navbar() {
@@ -80,4 +79,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )}
+  )
+}
